@@ -8,6 +8,7 @@
     <title>Youtube</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="youtube.css">
+    <script src="youtube.js"></script>
     <script src="https://kit.fontawesome.com/443c2350d0.js" crossorigin="anonymous"></script>
 </head>
 
@@ -26,7 +27,7 @@
 
     <!-- Player -->
     <div class="player">
-        <video src="video/sea.mp4"></video>
+        <video controls autoplay src="video/sea.mp4"></video>
     </div>
 
     <!-- Info -->
@@ -38,16 +39,16 @@
         </ul>
         <div class="meta">
             <div class="titleAndView">
-                <span class="title">Clone Coding: Youtube Mobile Website 유튜브 모바일 웹사이트 만들기 | 프론트엔드 개발자 입문편: HTML, CSS,
+                <span class="title clamp">Clone Coding: Youtube Mobile Website 유튜브 모바일 웹사이트 만들기 | 프론트엔드 개발자 입문편: HTML, CSS,
                     Javascript
                     프론트엔드 실전 입문편 (Ruvim Miksanskiy님의 동영상, 출처: Pexels)</span>
                 <span class="view">1M views 1 month ago</span>
             </div>
-            <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            <button class="moreBtn" onclick="moreBtn()"><i class="fas fa-caret-down"></i></button>
         </div>
         <ul class="action">
-            <li><button><i class="fas fa-thumbs-up"></i><span>1K</span></button></li>
-            <li><button><i class="fas fa-thumbs-down"></i><span>0</span></button></li>
+            <li><button class="like-dislike" onclick="like()"><i class="fas fa-thumbs-up"></i><span>1K</span></button></li>
+            <li><button class="like-dislike" onclick="dislike()"><i class="fas fa-thumbs-down"></i><span>0</span></button></li>
             <li><button><i class="fas fa-share"></i><span>Share</span></button></li>
             <li><button><i class="fas fa-plus"></i><span>Save</span></button></li>
             <li><button><i class="fas fa-flag"></i><span>Report</span></button></li>
@@ -60,7 +61,7 @@
                     <span class="subscribers">1M subscribers</span>
                 </div>
             </div>
-            <button class="subscribe">SUBSCRIBE</button>
+            <button class="subscribe" onclick="subscribe()">SUBSCRIBE</button>
         </div>
     </div>
 
@@ -107,5 +108,4 @@
         </ul>
     </div>
 </body>
-
 </html>
